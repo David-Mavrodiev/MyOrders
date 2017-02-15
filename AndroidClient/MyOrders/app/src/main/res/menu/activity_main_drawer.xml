@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_products"
+            android:icon="@drawable/ic_menu_manage"
+            android:title="Products" />
+        <item
+            android:visible="false"
+            android:id="@+id/nav_my_orders"
+            android:icon="@drawable/ic_menu_share"
+            android:title="My Orders" />
+        <item
+            android:visible="false"
+            android:id="@+id/nav_my_products"
+            android:icon="@drawable/ic_menu_slideshow"
+            android:title="My Products" />
+        <item
+            android:id="@+id/nav_gallery"
+            android:icon="@drawable/ic_menu_gallery"
+            android:title="Images of products" />
+    </group>
+
+    <item android:title="Feedback">
+        <menu>
+            <item
+                android:id="@+id/nav_send"
+                android:icon="@drawable/ic_menu_send"
+                android:title="Send" />
+        </menu>
+    </item>
+
+</menu>
