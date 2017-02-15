@@ -26,6 +26,8 @@ module.exports = app => {
         .get('/home', pagesController.getHome)
         .get('/addItem', pagesController.getAddItem)
         .post('/addItem', multer({ storage: storage }).single('upl'), pagesController.addItem)
+        .get('/DetailProduct/:title', pagesController.getDetailProduct)
+        .post('/addOrder', pagesController.addOrderToProduct)
         .get('/', pagesController.getHome);
 
     app.use(router);

@@ -33,7 +33,22 @@ module.exports = function(productData) {
                     result: req.user
                 });
             } else {
-                res.render("../views/login.pug");
+                res.redirect("/login");
+            }
+        },
+        getDetailProduct(req, res){
+            if(req.isAuthenticated()){
+                let title = req.params.title;
+                productData.findByTitle(title).then(product => {
+                    res.render('../views/detail-item.pug', {    
+                        result: {
+                            product: product,
+                            user: req.user
+                        }
+                    });
+                });
+            }else{
+                res.redirect("/login");
             }
         },
         addItem(req, res){
@@ -56,6 +71,14 @@ module.exports = function(productData) {
                      res.redirect('/home');
                    });
                 }
+            });
+        },
+        addOrderToProduct(req, res){
+            let username = req.user.username;
+            let title = req.body.title;
+
+            productData.addOrderToProduct(title, username).then((p) => {
+                res.redirect('/home');
             });
         }
     }

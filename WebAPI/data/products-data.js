@@ -35,9 +35,29 @@ module.exports = {
             title: obj.title,
             price: obj.price,
             description: obj.description,
-            owner: obj.owner
+            owner: obj.owner,
+            orders: []
         });
 
         return Promise.resolve(product.save());
-    }
+    },
+    addOrderToProduct: function(title, username) {
+            return new Promise((resolve, reject) => {
+                Product.findOneAndUpdate({
+                    title: title
+                }, {
+                    $push: {
+                        orders: {
+                            username: username
+                        }
+                    }
+                }, (err, product) => {
+                    if (err) {
+                        reject(err);
+                    }
+
+                    return resolve(product);
+                });
+            })
+        }
 };

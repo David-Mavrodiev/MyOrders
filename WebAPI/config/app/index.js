@@ -12,6 +12,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(cookieParser());
 app.use(session({ secret: 'purple unicorn' }));
 app.use("/static", express.static("public"));
+app.use("/DetailProduct/static", express.static("public"));
 app.set("view engine", "pug");
 
 require('../passport/')(app);

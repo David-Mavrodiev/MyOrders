@@ -1,0 +1,51 @@
+doctype html
+html
+  head
+    meta(charset='utf-8')
+    title MyOrders
+    link(rel='shortcut icon', type='image/x-icon', href='static/favicon.ico')
+    link(rel='stylesheet', href='static/css/bootstrap.min.css')
+    style(media='screen').
+      .footer{
+      background-color: #dbd6d6;
+      text-align: center;
+      }
+  body
+    nav.navbar.navbar-inverse
+      .container-fluid
+        .navbar-header
+          a.navbar-brand(href='/home') My Orders
+        ul.nav.navbar-nav
+          li
+            a(href='/home') Home
+        ul.nav.navbar-nav.navbar-right
+            li
+              a(href='/home', class='glyphicon glyphicon-user')
+               span=' Hello,' + result.user.username + '!'
+            li
+              a(href='/logout', class='glyphicon glyphicon-log-in')
+               span=' Logout'
+    .container
+        .row
+            .col-lg-12
+            h1#ProductTitle.page-header= result.product.title
+              small= " by " +  result.product.owner
+        .row
+            .col-md-8
+             img.img-responsive(src='/static/uploads/' + result.product.title + '.jpg', alt='')
+            .col-md-4
+            h3 Description
+            p= result.product.description
+            h3= "Price: " + result.product.price
+            input#addOrder.btn-success.form-control.btn.btn-register(type='button', value='Order')
+            h3 Clients
+            ul
+             each orderUser in result.product.orders
+              li= orderUser.username
+    .footer.navbar-fixed-bottom
+        h4
+          | Made by 
+          a(href='https://github.com/David-Mavrodiev/MyOrders') OUR TEAM
+    script(src='static/js/jquery.js')
+    script(src='static/js/bootstrap.min.js')
+    script(src='static/js/addOrderLogic.js')

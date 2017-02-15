@@ -2,7 +2,7 @@ doctype html
 html
   head
     meta(charset='utf-8')
-    title Е-горски
+    title MyOrders
     link(rel='shortcut icon', type='image/x-icon', href='static/favicon.ico')
     link(rel='stylesheet', href='static/css/bootstrap.min.css')
     style(media='screen').
@@ -50,7 +50,7 @@ html
         .items
           each product in result.products
            .col-md-4
-            a(href="/DetailProduct?Title=" + product.title)
+            a(href="/DetailProduct/" + product.title)
              .thumbnail
               img.img-circle.img-responsive.profile-image(style='width: 200px; height: 200px;', src='./static/uploads/' + product.title + '.jpg')
               .caption
