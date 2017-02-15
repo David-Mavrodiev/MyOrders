@@ -5,7 +5,7 @@ var multer = require('multer'),
 
     var storage = multer.diskStorage({
   destination: function (req, file, cb) {
-    cb(null, './uploads/')
+    cb(null, './public/uploads/')
   },
   filename: function (req, file, cb) {
     cb(null, req.body.title + '.jpg') //Appending .jpg
@@ -17,7 +17,9 @@ var upload = multer({ storage: storage });
 const router = require('express').Router(),
     createPagesController = require('../controller/pages-controller');
 
-const pagesController = createPagesController();
+const productData = require('../data/products-data');
+
+const pagesController = createPagesController(productData);
 
 module.exports = app => {
     router

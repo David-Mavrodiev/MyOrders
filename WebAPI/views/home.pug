@@ -28,19 +28,34 @@ html
             li
               a(href='/home', class='glyphicon glyphicon-user')
                span=' Hello,' + result.username + '!'
+               if result.IsSeller
+                span  Role:Seller
+               else
+                span Role:Consumer
             li
               a(href='/logout', class='glyphicon glyphicon-log-in')
                span=' Logout'
     .jumbotron.text-center
       if result.isUserAuthenticated
-        if result.IsSeller
-          h1(style='color: blue;text-shadow: 2px 2px #42d9f4;') Your items!
-        else
-          h1(style='color: blue;text-shadow: 2px 2px #42d9f4;') Your bought items!
+          h1(style='color: blue;text-shadow: 2px 2px #42d9f4;') All products
       else
         h1(style='color: green;text-shadow: 2px 2px #1ff438;') My Orders
         p(style="color: brown")
             | (online system to make easier control your sells)
+    if result.products
+     if result.products.length == 0
+      .jumbotron.text-center
+        h3 No Items!
+     else
+        .items
+          each product in result.products
+           .col-md-4
+            a(href="/DetailProduct?Title=" + product.title)
+             .thumbnail
+              img.img-circle.img-responsive.profile-image(style='width: 200px; height: 200px;', src='./static/uploads/' + product.title + '.jpg')
+              .caption
+                p.text-center= product.title
+                p.text-center= product.owner
     .container
       .row
             if !result.isUserAuthenticated
