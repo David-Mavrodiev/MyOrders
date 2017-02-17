@@ -18,8 +18,9 @@ const router = require('express').Router(),
     createPagesController = require('../controller/pages-controller');
 
 const productData = require('../data/products-data');
+const userData = require('../data/users-data');
 
-const pagesController = createPagesController(productData);
+const pagesController = createPagesController(productData, userData);
 
 module.exports = app => {
     router
@@ -28,6 +29,8 @@ module.exports = app => {
         .post('/addItem', multer({ storage: storage }).single('upl'), pagesController.addItem)
         .get('/DetailProduct/:title', pagesController.getDetailProduct)
         .post('/addOrder', pagesController.addOrderToProduct)
+        .get('/myProducts', pagesController.getUserProducts)
+        .get('/myOrders', pagesController.getUserOrders)
         .get('/', pagesController.getHome);
 
     app.use(router);

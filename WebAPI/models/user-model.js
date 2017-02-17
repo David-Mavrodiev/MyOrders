@@ -13,6 +13,11 @@ let userSchema = new mongoose.Schema({
     },
     IsSeller: {
         type: Boolean
+    },
+    orders: {
+        type: [{
+            title: String,
+        }]
     }
 });
 

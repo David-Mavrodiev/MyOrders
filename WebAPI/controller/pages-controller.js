@@ -3,7 +3,7 @@
 var path = require('path'),
     fs = require('fs');
 
-module.exports = function(productData) {
+module.exports = function(productData, userData) {
     return {
         getHome(req, res) {
             if (req.isAuthenticated()) {
@@ -76,10 +76,52 @@ module.exports = function(productData) {
         addOrderToProduct(req, res){
             let username = req.user.username;
             let title = req.body.title;
-
-            productData.addOrderToProduct(title, username).then((p) => {
-                res.redirect('/home');
-            });
+            userData.addOrderToUser(title, username).then(user => {
+                productData.addOrderToProduct(title, username).then((p) => {
+                  res.redirect('/home');
+                });
+            })
+        },
+        getUserProducts(req, res){
+            if(req.isAuthenticated() && req.user.IsSeller){
+                let username = req.user.username;
+                productData.findByOwner(username).then(products => {
+                  res.render('../views/myProducts.pug', {
+                      result:{
+                            isUserAuthenticated: true,
+                            username: req.user.username,
+                            IsSeller: req.user.IsSeller,
+                            products: products
+                      }
+                  });
+                });
+            }else{
+                res.render('../views/error.pug', {
+                        result: {
+                            error: 'You are not seller!',
+                            back: '/home'
+                        }
+                });
+            }
+        },
+        getUserOrders(req, res){
+            if(req.isAuthenticated()){
+                  res.render('../views/myOrders.pug', {
+                      result:{
+                            isUserAuthenticated: true,
+                            username: req.user.username,
+                            IsSeller: req.user.IsSeller,
+                            products: req.user.orders
+                      }
+                  });
+            }else{
+                res.render('../views/error.pug', {
+                        result: {
+                            error: 'You have to log in!',
+                            back: '/home'
+                        }
+                });
+            }
         }
     }
 }

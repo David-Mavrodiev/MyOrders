@@ -42,5 +42,24 @@ module.exports = {
         });
 
         return Promise.resolve(user.save());
+    },
+    addOrderToUser(title, username) {
+            return new Promise((resolve, reject) => {
+                User.findOneAndUpdate({
+                    username: username
+                }, {
+                    $push: {
+                        orders: {
+                            title: title
+                        }
+                    }
+                }, (err, user) => {
+                    if (err) {
+                        reject(err);
+                    }
+
+                    return resolve(user);
+                });
+            })
     }
 };

@@ -22,6 +22,14 @@ module.exports = {
         let query = Product.find().where({});
         return Promise.resolve(query.exec());
     },
+    findByOwner(username){
+        let query = Product.find()
+            .where({
+                owner: new RegExp(username, "i")
+            });
+
+        return Promise.resolve(query.exec());
+    },
     findByTitle(title) {
         let query = Product.findOne()
             .where({

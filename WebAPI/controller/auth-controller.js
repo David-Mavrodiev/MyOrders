@@ -50,7 +50,8 @@ module.exports = function(data) {
                         const user = {
                             username: req.body.username,
                             password: req.body.password,
-                            IsSeller: Boolean(req.body.userRole) | false 
+                            IsSeller: Boolean(req.body.userRole) | false ,
+                            orders: []
                         };
 
                         data.createUser(user)

@@ -22,7 +22,7 @@ html
             a(href='/home') Home
           if result.isUserAuthenticated
            li
-             a(href='/myOrders') My Orders
+            a(href='/myOrders') My Orders
           if result.isUserAuthenticated && result.IsSeller
            li
             a(href='/addItem') Add Item
@@ -33,20 +33,11 @@ html
             li
               a(href='/home', class='glyphicon glyphicon-user')
                span=' Hello,' + result.username + '!'
-               if result.IsSeller
-                span  Role:Seller
-               else
-                span Role:Consumer
             li
               a(href='/logout', class='glyphicon glyphicon-log-in')
                span=' Logout'
     .jumbotron.text-center
-      if result.isUserAuthenticated
-          h1(style='color: blue;text-shadow: 2px 2px #42d9f4;') All products
-      else
-        h1(style='color: green;text-shadow: 2px 2px #1ff438;') My Orders
-        p(style="color: brown")
-            | (online system to make easier control your sells)
+        h1(style='color: blue;text-shadow: 2px 2px #42d9f4;') My Products
     if result.products
      if result.products.length == 0
       .jumbotron.text-center
@@ -61,28 +52,8 @@ html
               .caption
                 p.text-center= product.title
                 p.text-center= product.owner
-    .container
-      .row
-            if !result.isUserAuthenticated
-              .col-sm-4
-              a(href='/login')
-                h3.btn-lg.btn-success(style="text-align: center;") Login / Register                
+    .container                
       .footer.navbar-fixed-bottom
         h4
           | Made by 
           a(href='https://github.com/David-Mavrodiev/MyOrders') OUR TEAM
-      
-script(type='text/javascript').
-  var frm = $('#myform');
-  frm.submit(function (ev) {
-  $.ajax({
-  type: frm.attr('method'),
-  url: frm.attr('action'),
-  data: frm.serialize(),
-  success: function (data) {
-  $("#Alert").css('display', "block");
-  }
-  });
-  ev.preventDefault();
-  });
-

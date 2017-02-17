@@ -18,6 +18,14 @@ html
         ul.nav.navbar-nav
           li
             a(href='/home') Home
+          if result.isUserAuthenticated
+           li
+             a(href='/myOrders') My Orders
+          if result.isUserAuthenticated && result.IsSeller
+           li
+            a(href='/addItem') Add Item
+           li
+            a(href='/myProducts') My Products
         ul.nav.navbar-nav.navbar-right
             li
               a(href='/home', class='glyphicon glyphicon-user')
