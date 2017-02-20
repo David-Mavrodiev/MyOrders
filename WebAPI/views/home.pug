@@ -20,7 +20,7 @@ html
         ul.nav.navbar-nav
           li
             a(href='/home') Home
-          if result.isUserAuthenticated
+          if result.isUserAuthenticated && !result.IsSeller
            li
              a(href='/myOrders') My Orders
           if result.isUserAuthenticated && result.IsSeller

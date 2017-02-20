@@ -18,10 +18,10 @@ html
         ul.nav.navbar-nav
           li
             a(href='/home') Home
-          if result.isUserAuthenticated
+          if !result.user.IsSeller
            li
              a(href='/myOrders') My Orders
-          if result.isUserAuthenticated && result.IsSeller
+          if result.user.IsSeller
            li
             a(href='/addItem') Add Item
            li
@@ -45,7 +45,8 @@ html
             h3 Description
             p= result.product.description
             h3= "Price: " + result.product.price
-            input#addOrder.btn-success.form-control.btn.btn-register(type='button', value='Order')
+            if !result.user.IsSeller
+             input#addOrder.btn-success.form-control.btn.btn-register(type='button', value='Order')
             h3 Clients
             ul
              each orderUser in result.product.orders
