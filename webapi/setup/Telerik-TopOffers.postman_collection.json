@@ -1,0 +1,278 @@
+{
+	"variables": [],
+	"info": {
+		"name": "Telerik/TopOffers",
+		"_postman_id": "14aeac03-41fe-a0bb-6f86-773b7dd24027",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "localhost:8000/api/login",
+			"request": {
+				"url": "http://192.168.0.103:8000/api/login",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"username\": \"ivan\",\n\t\"password\": \"123\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8000/api/register",
+			"request": {
+				"url": "http://192.168.0.103:8000/api/register",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"username\": \"stancho\",\n\t\"password\": \"123\",\n\t\"role\": \"buyer\",\n\t\"firstName\": \"Stancho\",\n\t\"lastName\": \"Stanchev\",\n\t\"address\": \"bul. Stancho #4, Sofia, Bulgaria, 1000\",\n\t\"phone\": \"+359 866 66 66 66\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8000/api/products",
+			"request": {
+				"url": "http://192.168.0.103:8000/api/products",
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-cookie",
+						"value": "{\"id\":1,\"username\":\"ivan\",\"role\":\"seller\"}",
+						"description": ""
+					}
+				],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8000/api/product/1",
+			"request": {
+				"url": "http://192.168.0.103:8000/api/products/1",
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-cookie",
+						"value": "{\"id\":1,\"username\":\"ivan\",\"role\":\"seller\"}",
+						"description": ""
+					}
+				],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8000/api/product",
+			"request": {
+				"url": "http://192.168.0.103:8000/api/products",
+				"method": "POST",
+				"header": [
+					{
+						"key": "x-cookie",
+						"value": "{\"id\":1,\"username\":\"ivan\",\"role\":\"seller\"}",
+						"description": ""
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"title\": \"FADFSDFSD\",\n\t\"price\": 10.25,\n\t\"quantity\": 5,\n\t\"description\": \"ee\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8000/api/product/7",
+			"request": {
+				"url": "http://192.168.0.103:8000/api/products/5",
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "x-cookie",
+						"value": "{\"id\":1,\"username\":\"ivan\",\"role\":\"seller\"}",
+						"description": ""
+					}
+				],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8000/api/product/5",
+			"request": {
+				"url": "http://192.168.0.103:8000/api/products/6",
+				"method": "PUT",
+				"header": [
+					{
+						"key": "x-cookie",
+						"value": "{\"id\":1,\"username\":\"ivan\",\"role\":\"seller\"}",
+						"description": ""
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"title\": \"kiro\",\n\t\"price\": 1,\n\t\"quantity\": 1,\n\t\"description\": \"2razbi2%\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8000/api/orders",
+			"request": {
+				"url": "http://192.168.0.103:8000/api/orders",
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-cookie",
+						"value": "{\"id\":1,\"username\":\"ivan\",\"role\":\"seller\"}",
+						"description": ""
+					}
+				],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8000/api/orders/1",
+			"request": {
+				"url": "http://192.168.0.103:8000/api/orders/1",
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-cookie",
+						"value": "{\"id\":1,\"username\":\"ivan\",\"role\":\"seller\"}",
+						"description": ""
+					}
+				],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8000/api/order",
+			"request": {
+				"url": "http://192.168.0.103:8000/api/orders",
+				"method": "POST",
+				"header": [
+					{
+						"key": "x-cookie",
+						"value": "{\"id\":2,\"username\":\"kolio\",\"role\":\"buyer\"}",
+						"description": ""
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"productId\": 1,\n\t\"quantity\": 3,\n\t\"deliveryAddress\": \"geo: lat: 123, long: 321\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "http://192.168.0.103:8000/api/orders/1",
+			"request": {
+				"url": "http://192.168.0.103:8000/api/orders/1",
+				"method": "PUT",
+				"header": [
+					{
+						"key": "x-cookie",
+						"value": "{\"id\":1,\"username\":\"ivan\",\"role\":\"buyer\"}",
+						"description": ""
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"status\": \"notReceived\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8000/api/profile",
+			"request": {
+				"url": "http://192.168.0.103:8000/api/profile",
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-cookie",
+						"value": "{\"id\":3,\"username\":\"misho\",\"role\":\"seller\"}",
+						"description": ""
+					}
+				],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8000/api/profile",
+			"request": {
+				"url": "http://192.168.0.103:8000/api/profile",
+				"method": "PUT",
+				"header": [
+					{
+						"key": "x-cookie",
+						"value": "{\"id\":3,\"username\":\"misho\",\"role\":\"seller\"}",
+						"description": ""
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"password\": \"321\",\n\t\"firstName\": \"www\",\n\t\"lastName\": \"sdfsfs\",\n\t\"address\": \"svbb\",\n\t\"phone\": \"66\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}

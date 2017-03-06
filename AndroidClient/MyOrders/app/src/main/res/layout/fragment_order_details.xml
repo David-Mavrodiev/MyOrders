@@ -1,0 +1,142 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    tools:context="com.topoffers.topoffers.common.fragments.OrderDetailsFragment">
+
+    <TextView
+        android:id="@+id/tv_order_details_product_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/BigPageTitle"/>
+
+    <ImageView
+        android:id="@+id/iv_order_details_image"
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        style="@style/OrderDetailsImageWrap"/>
+
+    <!-- Order Details -->
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/order_details"
+        style="@style/OrderDetailsSubHeading"/>
+
+    <TextView
+        android:id="@+id/tv_order_details_quantity"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/tv_order_details_single_price"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/tv_order_details_total_price"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/OrderDetailsTotalPrice"/>
+
+    <TextView
+        android:id="@+id/tv_order_details_dateOrdered"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:id="@+id/tv_order_details_address"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/tv_order_details_status"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <!-- Buyers Details -->
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/buyer_details"
+        style="@style/OrderDetailsSubHeading"/>
+
+    <TextView
+        android:id="@+id/tv_order_details_buyer_fullname"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/tv_order_details_buyer_username"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/tv_order_details_buyer_phone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/tv_order_details_buyer_address"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <!-- Seller details -->
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/seller_details"
+        style="@style/OrderDetailsSubHeading"/>
+
+    <TextView
+        android:id="@+id/tv_order_details_seller_fullname"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/tv_order_details_seller_username"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:id="@+id/tv_order_details_seller_phone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:id="@+id/tv_order_details_seller_address"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <!-- Extras -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        style="@style/OrderDetailsActionButtonWrap">
+            <Button
+                android:id="@+id/btn_order_history_mark_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/Widget.AppCompat.Button" />
+
+            <Button
+                android:id="@+id/btn_order_history_mark_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/Widget.AppCompat.Button" />
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+</LinearLayout>

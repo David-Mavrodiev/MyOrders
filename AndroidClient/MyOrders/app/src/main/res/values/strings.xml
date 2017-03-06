@@ -1,8 +1,97 @@
 <resources>
-    <string name="app_name">MyOrders</string>
+    <string name="app_name">Top Offers</string>
 
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
 
     <string name="action_settings">Settings</string>
+
+    <!-- Login -->
+    <string name="tv_login_page_title">Welcome to Top Offers</string>
+    <string name="username">Username</string>
+    <string name="password">Password</string>
+    <string name="submit">Submit</string>
+    <string name="login">Login</string>
+
+    <!-- Register -->
+    <string name="register">Register</string>
+    <string name="firstname">FirstName</string>
+    <string name="lastname">LastName</string>
+    <string name="phone">Phone</string>
+    <string name="address">Address</string>
+    <string name="back_to_login">Back to login</string>
+    <string name="seller">Seller</string>
+    <string name="buyer">Buyer</string>
+
+    <!-- Seller -->
+    <string name="seller_products_list_title">Seller products list</string>
+    <string name="seller_orders_list_title">Seller products list</string>
+
+    <!-- Buyer -->
+    <string name="buyers_products_list_title">Products list</string>
+    <string name="title_activity_main">Sign in</string>
+
+    <!-- Strings related to login -->
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Password (optional)</string>
+    <string name="action_sign_in">Sign in or register</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="error_invalid_email">This email address is invalid</string>
+    <string name="error_invalid_password">This password is too short</string>
+    <string name="error_incorrect_password">This password is incorrect</string>
+    <string name="error_field_required">This field is required</string>
+    <string name="permission_rationale">"Contacts permissions are needed for providing email
+        completions."
+    </string>
+
+    <!-- My profile -->
+    <string name="logout">Logout</string>
+    <string name="edit_profile_btn">Edit profile</string>
+
+    <!-- Edit my profile -->
+    <string name="myprofile_edit_title">Edit my profile</string>
+    <string name="hint_first_name">First name</string>
+    <string name="hint_last_name">Last name</string>
+    <string name="hint_address">Address</string>
+    <string name="hint_phone">Phone</string>
+    <string name="hint_password">Password</string>
+    <string name="back_to_profile">Back to profile</string>
+    <string name="save">Save</string>
+
+    <!-- Logout fragment -->
+    <string name="myprofile_title">My profile</string>
+
+    <!-- List products -->
+    <string name="no_add_products_text">You have not add any products yet.</string>
+
+    <!-- Product Details -->
+    <string name="product_details">Product details</string>
+    <string name="edit_product_btn_text">Edit product</string>
+    <string name="delete_product_btn_text">Delete product</string>
+    <string name="order_history_btn_text">View order history</string>
+
+    <!-- Create new product -->
+    <string name="create_new_product">Create new product</string>
+    <string name="title">Title</string>
+    <string name="price">Price</string>
+    <string name="quantity">Quantity</string>
+    <string name="description">Description</string>
+    <string name="create_product_button_text">Create product</string>
+    <string name="create_new_product_button_text">Add product</string>
+    <string name="title_activity_seller_order_history">SellerOrderHistory</string>
+    <string name="take_picture">Take picture</string>
+    <string name="upload_picture">Upload picture</string>
+    <string name="please_take_upload_image">Please take/upload image</string>
+
+    <!-- Orders list -->
+    <string name="no_orders_made">You have not any orders yet.</string>
+
+    <!-- Order details -->
+    <string name="order_details">Order details</string>
+    <string name="buyer_details">Buyer details</string>
+    <string name="seller_details">Seller details</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
 </resources>

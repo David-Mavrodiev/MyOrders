@@ -1,23 +1,65 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.dsm2001.myorders">
+    package="com.topoffers.topoffers">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+    <meta-data
+        android:name="DATABASE"
+        android:value="topOffers.db" />
+    <meta-data
+        android:name="VERSION"
+        android:value="2" />
+    <meta-data
+        android:name="QUERY_LOG"
+        android:value="true" />
+    <meta-data
+        android:name="DOMAIN_PACKAGE_NAME"
+        android:value="com.topoffers.offers" />
+
+    <!-- To auto-complete the email text field in the login form with the user's emails -->
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.READ_PROFILE" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
 
     <application
+        android:name=".TopOffersApplication"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity
-            android:name=".MainActivity"
-            android:label="@string/app_name"
-            android:theme="@style/AppTheme.NoActionBar">
+        <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".MainActivity2"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".login.LoginActivity" />
+        <activity android:name=".seller.activities.SellerProductsListActivity" />
+        <activity android:name=".buyer.activities.BuyerProductsListActivity" />
+        <activity android:name=".seller.activities.SellerProductDetailsActivity" />
+        <activity android:name=".buyer.activities.BuyerProductDetailsActivity" />
+        <activity android:name=".seller.activities.UpdateProductActivity" />
+        <activity android:name=".seller.activities.SellerOrderHistoryListActivity" />
+        <activity android:name=".seller.activities.SellerOrderHistoryDetailsActivity" />
+        <activity android:name=".register.RegisterActivity" />
+        <activity android:name=".profile.MyProfileActivity" />
+        <activity android:name=".profile.EditMyProfileActivity" />
+        <activity android:name=".buyer.activities.BuyerProductsCart" />
+        <activity android:name=".buyer.activities.BuyerOrderHistoryListActivity" />
+        <activity android:name=".buyer.activities.BuyerOrderHistoryDetailsActivity"></activity>
+
+        <service android:name=".common.services.GetApplicationDescriptionFileService" />
     </application>
 
 </manifest>

@@ -18,7 +18,135 @@
     <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
 
     <style name="BigText">
-        <item name="android:textSize">50dp</item>
+        <item name="android:textSize">50sp</item>
     </style>
 
+    <!-- Common -->
+    <style name="BigPageTitle">
+        <item name="android:layout_marginTop">10dp</item>
+        <item name="android:layout_marginBottom">20dp</item>
+        <item name="android:textSize">25sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/colorAccent</item>
+    </style>
+
+    <style name="Input">
+        <item name="android:textSize">15sp</item>
+    </style>
+
+    <style name="Title">
+        <item name="android:layout_marginBottom">20dp</item>
+        <item name="android:textSize">20sp</item>
+    </style>
+
+    <style name="NoListRecordsText">
+        <item name="android:textStyle">italic</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:layout_marginTop">15dp</item>
+    </style>
+
+    <!-- Login -->
+    <style name="LoginPageTitle">
+        <item name="android:layout_marginTop">10dp</item>
+        <item name="android:layout_marginBottom">20dp</item>
+        <item name="android:textSize">22sp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/colorAccent</item>
+    </style>
+
+    <style name="LoginPageLogin">
+        <item name="android:layout_marginBottom">10dp</item>
+        <item name="android:textSize">17sp</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <!-- My profile -->
+    <style name="MyProfileText">
+        <item name="android:layout_marginBottom">10dp</item>
+    </style>
+
+    <!-- Product List -->
+    <style name="ProductListWrap">
+        <item name="android:layout_marginBottom">20dp</item>
+    </style>
+
+    <style name="ProductListImageWrap">
+        <item name="android:layout_marginRight">10dp</item>
+        <item name="android:textSize">5sp</item>
+        <item name="android:layout_marginTop">10dp</item>
+        <item name="android:layout_marginBottom">10dp</item>
+    </style>
+
+    <style name="ProductListTextWrap">
+        <item name="android:layout_marginTop">10dp</item>
+        <item name="android:layout_marginBottom">10dp</item>
+    </style>
+
+    <style name="ProductListTitle">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:layout_marginBottom">0dp</item>
+    </style>
+
+    <!-- Product Details -->
+    <style name="ProductDetailsImageWrap">
+        <item name="android:layout_marginBottom">20dp</item>
+    </style>
+
+    <style name="ProductDetailsActionButtonWrap">
+        <item name="android:layout_marginTop">20dp</item>
+    </style>
+
+    <style name="UploadImageText">
+        <item name="android:layout_marginTop">10dp</item>
+        <item name="android:layout_marginBottom">10dp</item>
+    </style>
+
+    <style name="TempRED">
+        <item name="android:textColor">#FF0000</item>
+    </style>
+
+    <!-- Order List -->
+    <style name="OrderListTextWrap">
+        <item name="android:layout_marginTop">10dp</item>
+        <item name="android:layout_marginBottom">10dp</item>
+    </style>
+
+    <style name="OrderListTitle">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:layout_marginBottom">0dp</item>
+    </style>
+
+    <style name="OrderListTotalPrice">
+        <item name="android:textColor">#A50000</item>
+    </style>
+
+    <!-- Order Details -->
+    <style name="OrderDetailsImageWrap">
+        <item name="android:layout_marginBottom">0dp</item>
+    </style>
+
+    <style name="OrderDetailsSubHeading">
+        <item name="android:layout_marginTop">20dp</item>
+        <item name="android:layout_marginBottom">10dp</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textAllCaps">true</item>
+    </style>
+
+    <style name="OrderDetailsTotalPrice">
+        <item name="android:textColor">#A50000</item>
+    </style>
+
+    <style name="OrderDetailsActionButtonWrap">
+        <item name="android:layout_marginTop">20dp</item>
+    </style>
+
+    <style name="RegisterText">
+        <item name="android:layout_marginBottom">10dp</item>
+        <item name="android:textSize">17sp</item>
+        <item name="android:gravity">center</item>
+    </style>
 </resources>

@@ -1,0 +1,97 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:fillViewport="true"
+    tools:context="com.topoffers.topoffers.seller.fragments.UpdateProductFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_update_product_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/create_new_product"
+            style="@style/BigPageTitle" />
+
+        <EditText
+            android:id="@+id/et_update_product_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/title"
+            style="@style/Input" />
+
+        <EditText
+            android:id="@+id/et_update_product_price"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:hint="@string/price"
+            style="@style/Input" />
+
+        <EditText
+            android:id="@+id/et_update_product_quantity"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:hint="@string/quantity"
+            style="@style/Input" />
+
+        <EditText
+            android:id="@+id/et_update_product_description"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textMultiLine"
+            android:lines="3"
+            android:gravity="top|left"
+            android:maxLines="6"
+            android:hint="@string/description"
+            style="@style/Input" />
+
+        <LinearLayout
+            android:id="@+id/action_image_buttons_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btn_update_product_upload_picture_camera"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                style="@style/Widget.AppCompat.Button"
+                android:text="@string/take_picture"/>
+
+            <Button
+                android:id="@+id/btn_update_product_upload_picture_gallery"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                style="@style/Widget.AppCompat.Button"
+                android:text="@string/upload_picture"/>
+
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/im_product_image"
+            android:layout_width="wrap_content"
+            android:layout_height="300dp"
+            android:layout_gravity="center" />
+
+        <TextView
+            android:id="@+id/tv_upload_create_image"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/UploadImageText"
+            android:text="@string/please_take_upload_image"/>
+
+        <Button
+            android:id="@+id/btn_update_product"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/Widget.AppCompat.Button.Colored"
+            android:text="@string/create_product_button_text"/>
+    </LinearLayout>
+
+</ScrollView>

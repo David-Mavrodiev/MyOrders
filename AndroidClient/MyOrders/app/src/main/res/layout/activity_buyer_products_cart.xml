@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_buyer_products_cart"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.topoffers.topoffers.buyer.activities.BuyerProductsCart">
+    <FrameLayout
+        android:id="@+id/container_drawer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:id="@+id/tv_products_cart_price"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/RegisterText"
+        android:text=""/>
+
+    <TextView
+        android:id="@+id/tv_no_products_added_cart"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/NoListRecordsText"
+        android:text="@string/no_add_products_text"/>
+
+    <ListView
+            android:id="@+id/lv_cart_products"
+            android:layout_width="match_parent"
+            android:layout_height="200dp" />
+
+    <Button
+        android:id="@+id/restore_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Restore"/>
+
+    <Button
+        android:id="@+id/order_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Order"/>
+</LinearLayout>

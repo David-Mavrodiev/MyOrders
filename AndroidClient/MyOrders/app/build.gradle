@@ -2,10 +2,10 @@ apply plugin: 'com.android.application'
 
 android {
     compileSdkVersion 25
-    buildToolsVersion "25.0.1"
+    buildToolsVersion "24.0.0"
     defaultConfig {
-        applicationId "com.example.dsm2001.myorders"
-        minSdkVersion 15
+        applicationId "com.topoffers.topoffers"
+        minSdkVersion 17
         targetSdkVersion 25
         versionCode 1
         versionName "1.0"
@@ -24,7 +24,18 @@ dependencies {
     androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
         exclude group: 'com.android.support', module: 'support-annotations'
     })
-    compile 'com.android.support:appcompat-v7:25.0.1'
-    compile 'com.android.support:design:25.0.1'
+    compile project(path: ':data')
+    compile('com.mikepenz:materialdrawer:5.8.1@aar') {
+        transitive = true
+    }
+    compile 'com.android.support:appcompat-v7:25.1.0'
+    compile 'com.android.support:support-v4:25.1.0'
+    compile 'com.android.support:design:25.1.0'
+    compile 'com.google.dagger:dagger:2.9'
+    compile 'com.github.satyan:sugar:1.4'
+    compile 'com.google.code.gson:gson:2.8.0'
+    compile 'com.github.jkwiecien:EasyImage:1.3.1'
+    compile 'com.android.support:support-v4:25.2.0'
     testCompile 'junit:junit:4.12'
+    annotationProcessor 'com.google.dagger:dagger-compiler:2.9'
 }
